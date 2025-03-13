@@ -25,7 +25,7 @@ indexRouter.get("/", (req, res) => {
 
 // New Message form route
 indexRouter.get("/new", (req, res) => {
-  res.render("form", { title: "Leave a message!" });
+  res.render("form", { title: "Leave a message!", errors: [] });
 });
 
 // validation middleware

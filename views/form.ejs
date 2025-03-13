@@ -11,6 +11,16 @@
       <div class="message-chat-box">
         <div class="message-chat-inner">
           <form method="POST" action="/new">
+            <% if (errors && errors.length > 0) {%>
+            <div class="error-messages">
+              <ul>
+                <% errors.forEach(error => { %>
+                <li><%= error.msg %></li>
+                <% }); %>
+              </ul>
+            </div>
+            <% } %>
+
             <div class="message-user-field">
               <input
                 type="text"
