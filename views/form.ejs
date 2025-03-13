@@ -7,20 +7,58 @@
   <body>
     <h1><%= title %></h1>
 
-    <form method="POST" action="/new">
-      <div>
-        <label for="messageUser">Your Name:</label>
-        <input type="text" id="messageUser" name="messageUser" required />
+    <div class="message-container">
+      <div class="message-chat-box">
+        <div class="message-chat-inner">
+          <form method="POST" action="/new">
+            <div class="message-user-field">
+              <input
+                type="text"
+                name="messageUser"
+                class="message-user-input"
+                placeholder="Your name..."
+                required
+              />
+            </div>
+
+            <div class="message-divider"></div>
+
+            <div class="message-content-area">
+              <textarea
+                name="messageText"
+                class="message-textarea"
+                placeholder="Write a message..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="message-controls">
+              <button type="submit" class="message-submit-button">
+                <i>
+                  <svg viewBox="0 0 512 512" width="20" height="20">
+                    <path
+                      fill="currentColor"
+                      d="M473 39.05a24 24 0 0 0-25.5-5.46L47.47 185h-.08a24 24 0 0 0 1 45.16l.41.13l137.3 58.63a16 16 0 0 0 15.54-3.59L422 80a7.07 7.07 0 0 1 10 10L226.66 310.26a16 16 0 0 0-3.59 15.54l58.65 137.38c.06.2.12.38.19.57c3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0 0 23-15.46L478.39 64.62A24 24 0 0 0 473 39.05"
+                    ></path>
+                  </svg>
+                </i>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
 
-      <div>
-        <label for="messageText">Your Message:</label>
-        <textarea id="messageText" name="messageText" required></textarea>
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <a href="/" class="back-link">← Back to message board</a>
+      <a
+        href="/"
+        class="back-link"
+        style="
+          display: block;
+          margin-top: 15px;
+          color: #333;
+          text-decoration: none;
+        "
+        >← Back to message board</a
+      >
+    </div>
   </body>
 </html>

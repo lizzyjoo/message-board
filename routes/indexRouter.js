@@ -18,7 +18,7 @@ const messages = [
 
 // home page route with EJS templating system
 indexRouter.get("/", (req, res) => {
-  res.render("index", { title: "Mini Message Board", messages: messages });
+  res.render("index", { title: "Message Board", messages: messages });
 });
 
 // New Message form route
