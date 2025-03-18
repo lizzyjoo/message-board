@@ -73,18 +73,18 @@ indexRouter.get(
     res.redirect("/");
   }
 );
-// indexRouter.post("/new", (req, res) => {
-//   // get contents from the form
-//   const messageUser = req.body.messageUser;
-//   const messageText = req.body.messageText;
-//   messages.push({
-//     text: messageText,
-//     user: messageUser,
-//     added: new Date(),
-//     likes: 0,
-//   });
-//   res.redirect("/");
-// });
+indexRouter.post("/new", (req, res) => {
+  // get contents from the form
+  const messageUser = req.body.messageUser;
+  const messageText = req.body.messageText;
+  messages.push({
+    text: messageText,
+    user: messageUser,
+    added: new Date(),
+    likes: 0,
+  });
+  res.redirect("/");
+});
 
 indexRouter.post("/like/:messageIndex", (req, res) => {
   const messageIndex = parseInt(req.params.messageIndex);
